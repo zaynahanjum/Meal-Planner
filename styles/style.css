@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+
+}
+
+body {
+    background-image: url("../images/background.svg");
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.3rem;
+}
+
+.content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-weight: 600;
+    font-style: normal;
+    color: #36442c;
+    line-height: 2.8rem;
+    font-size: 3rem;
+}
+
+.tagline {
+    font-weight: 400;
+}
+
+.take-input {
+    position: relative;
+}
+
+#Ingredient {
+    position: absolute;
+    border-radius: 1000px;
+    border: 1px solid #73d957;
+    outline: none;
+    padding: .5rem .875rem;
+    width: 20rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1111;
+    background: transparent;
+    transition: .2s ease;
+    font-size: 1rem;
+}
+
+.labelline {
+    color: gray;
+    position: absolute;
+    margin: -35px 0 0 110px;
+    font-size: .8em;
+    transition: .2s ease;
+    background-color: white;
+}
+
+input:focus + .labelline,
+input:valid + .labelline {
+    transform: translate(.3em, -1.3em);
+    font-size: .8rem;
+    background-color: white;
+    z-index: 2222;
+    padding: 0 .8em;
+}
+
+.submit {
+    padding: .2rem 1rem;
+    border-radius: .8rem;
+    border: 3px solid #73d957;
+    background-color: #e7ffdd;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #73d957; 
+    border-color: #73d957; 
+    color: white; 
+}
+
+
+
