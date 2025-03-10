@@ -2,9 +2,7 @@ $(document).ready(function() {
     let ingredient = localStorage.getItem("selectedIngredient");
     console.log(ingredient);
     fetchMeal(ingredient);
-});
 
-$(document).ready(function() {
     $('#download-btn').on('click', function() {
         $("input").prop("checked", false);
         window.print();
@@ -57,29 +55,27 @@ async function fetchMeal(ingredientName) {
 
 
 function displayMeal(mealDetails) {
-    $(document).ready(function () {
-            $("h1").text(mealDetails.mealHeading);
-            $(".category").text("" + mealDetails.mealCategory);
-            $(".instructions").html("" + mealDetails.instructions);
-            mealDetails.ingredientList.forEach((ingredientName, index) => {
-                $("ul").append(`
-                    <div class = "ingredients-list">
-                    <input type="checkbox" id= ${ingredientName} name=${ingredientName}>
-                    <label for= ${ingredientName}>${mealDetails.quantity[index]} <b>${ingredientName}</b></label><br>
-                    </div>`);     
-                });
-            $("img").attr("src", mealDetails.imgUrl + "/large");
-            if (mealDetails.youtube !== "") {
-                $("a").attr("href",mealDetails.youtube);
-                $("a").text(mealDetails.youtube);
-            } else {
-                $("a").remove();
-                $(".youtube-head").remove();
-            }
+    $("h1").text(mealDetails.mealHeading);
+    $(".category").text("" + mealDetails.mealCategory);
+    $(".instructions").html("" + mealDetails.instructions);
+    mealDetails.ingredientList.forEach((ingredientName, index) => {
+        $("ul").append(`
+            <div class = "ingredients-list">
+            <input type="checkbox" id= ${ingredientName} name=${ingredientName}>
+            <label for= ${ingredientName}>${mealDetails.quantity[index]} <b>${ingredientName}</b></label><br>
+            </div>`);     
+    });
+    $("img").attr("src", mealDetails.imgUrl + "/large");
+    if (mealDetails.youtube !== "") {
+        $("a").attr("href",mealDetails.youtube);
+        $("a").text(mealDetails.youtube);
+    } else {
+        $("a").remove();
+        $(".youtube-head").remove();
+    }
             
-            $(".loader").fadeOut(500, function () {
-                $(".content").fadeIn(500);
-            });
+    $(".loader").fadeOut(500, function () {
+        $(".content").fadeIn(500);
     }); 
 }
 
