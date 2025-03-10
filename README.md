@@ -14,7 +14,7 @@ The **Meal Planner Website** helps users decide what to cook by providing random
 - **Download as PDF** – Save recipes for offline reference.  
 
 ## Technologies Used  
-- **Frontend** – HTML, CSS, JavaScript, jQuery  
+- **Frontend** – HTML, CSS, JavaScript/jQuery  
 - **API** – MealDB API  
 - **PDF Generation** – Built-in `window.print()` method    
 
